@@ -1,0 +1,80 @@
+{
+  "name": "vue-drawio",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Vue 3 component for integrating the Diagrams (draw.io) embed iframe",
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "npm run build && clean-publish",
+    "emit-declarations": "tsc --emitDeclarationOnly",
+    "build": "vite build && npm run emit-declarations",
+    "lint": "eslint . --ext ts,vue --report-unused-disable-directives --max-warnings 0",
+    "start:storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ggntju/vue-drawio"
+  },
+  "author": "Guannan Guo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ggntju/vue-drawio/issues"
+  },
+  "homepage": "",
+  "tags": [
+    "vue",
+    "diagram",
+    "draw.io"
+  ],
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/compiler-sfc": "^3.5.12",
+    "clean-publish": "^5.1.0",
+    "eslint": "^9.18.0",
+    "eslint-plugin-storybook": "^0.11.2",
+    "eslint-plugin-vue": "^9.32.0",
+    "rollup": "^4.30.1",
+    "rollup-plugin-delete": "^2.1.0",
+    "rollup-plugin-import-css": "^3.5.8",
+    "rollup-plugin-swc3": "^0.12.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vue": "^3.5.12",
+    "storybook": "^10.1.8",
+    "@storybook/vue3-vite": "^10.1.8",
+    "@chromatic-com/storybook": "^4.1.3",
+    "@storybook/addon-vitest": "^10.1.8",
+    "@storybook/addon-a11y": "^10.1.8",
+    "@storybook/addon-docs": "^10.1.8",
+    "@storybook/addon-onboarding": "^10.1.8",
+    "vitest": "^4.0.15",
+    "playwright": "^1.57.0",
+    "@vitest/browser-playwright": "^4.0.15",
+    "@vitest/coverage-v8": "^4.0.15"
+  },
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "exports": "./src/index.ts",
+  "publishConfig": {
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "exports": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "directory": "package"
+  },
+  "files": [
+    "dist"
+  ]
+}
