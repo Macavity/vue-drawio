@@ -6,6 +6,7 @@
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "scripts": {
+    "prepare": "npm run build",
     "prepublishOnly": "npm run build && clean-publish",
     "emit-declarations": "tsc --emitDeclarationOnly",
     "build": "vite build && npm run emit-declarations",
